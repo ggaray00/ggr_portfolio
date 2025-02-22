@@ -1,12 +1,13 @@
 import streamlit as st
 import uuid
 
+from app.travel_agent.main import get_langgraph
 # from .gg_agent import get_langgraph
 from langchain_core.messages import ToolMessage
 import random
 import time
 
-from travel_agent.main import get_langgraph
+
 
 if "authenticated" not in st.session_state or not st.session_state.authenticated:
     st.warning("🔒 Please login from the main page to access this page.")
