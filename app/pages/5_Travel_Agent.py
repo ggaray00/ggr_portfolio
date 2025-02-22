@@ -1,7 +1,7 @@
 import streamlit as st
 import uuid
 
-from app.travel_agent.main import get_langgraph
+from app.main import get_langgraph
 # from .gg_agent import get_langgraph
 from langchain_core.messages import ToolMessage
 import random
