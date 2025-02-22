@@ -6,7 +6,7 @@ from langchain_core.messages import ToolMessage
 import random
 import time
 
-from app.travel_agent.main import get_langgraph
+from travel_agent.main import get_langgraph
 
 if "authenticated" not in st.session_state or not st.session_state.authenticated:
     st.warning("🔒 Please login from the main page to access this page.")
