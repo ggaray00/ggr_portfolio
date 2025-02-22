@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "gg-portfolio"
+version = "0.1.0"
+description = ""
+authors = ["ggaray <ggaray@mrhouston.net>"]
+readme = "README.md"
+packages = [{include = "app/gg_agents"}]
+#package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.42.0"
+streamlit-authenticator = "^0.4.1"
+authlib = "^1.4.1"
+st-annotated-text = "^4.0.2"
+pdfplumber = "^0.11.5"
+streamlit-annotation-tools = "^1.0.1"
+streamlit-text-label = "^0.1.2"
+st-ner-annotate = "^0.1.0"
+st-copy-to-clipboard = "^0.1.6"
+huggingface-hub = "^0.29.1"
+langchain-core = "^0.3.37"
+langchain-aws = "^0.2.12"
+langgraph = "^0.2.73"
+pandas = "^2.2.3"
+#torch = "2.1.0"
+langchain-huggingface = "^0.1.2"
+openai = "^1.63.2"
+python-dotenv = "^1.0.1"
+langchain-anthropic = "0.3.7"
+pydantic = "^2.10.6"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
