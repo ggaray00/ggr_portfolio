@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "gg-portfolio"
+name = "ggr-portfolio"
 version = "0.1.0"
 description = ""
 authors = ["ggaray <ggaray@mrhouston.net>"]
 readme = "README.md"
 #packages = [{include = "app/gg_agents"}]
-package-mode = false
+#package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -29,6 +29,7 @@ openai = "^1.63.2"
 python-dotenv = "^1.0.1"
 langchain-anthropic = "0.3.7"
 pydantic = "^2.10.6"
+torch = "2.2.2"
 
 
 

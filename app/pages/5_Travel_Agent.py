@@ -1,13 +1,23 @@
 import streamlit as st
 import uuid
+import sys
+import os
 
-from app.travel_agent.main import get_langgraph
+# Add the project root to sys.path (adjust the relative path as needed)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+
+
+
 # from .main import get_langgraph
 # from .gg_agent import get_langgraph
 from langchain_core.messages import ToolMessage
 import random
 import time
 
+from app.graph import get_langgraph
 
 if "authenticated" not in st.session_state or not st.session_state.authenticated:
     st.warning("🔒 Please login from the main page to access this page.")
