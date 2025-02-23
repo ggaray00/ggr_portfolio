@@ -5,7 +5,7 @@ description = ""
 authors = ["ggaray <ggaray@mrhouston.net>"]
 readme = "README.md"
 #packages = [{include = "app/gg_agents"}]
-#package-mode = false
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
