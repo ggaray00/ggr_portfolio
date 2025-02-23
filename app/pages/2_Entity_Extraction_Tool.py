@@ -7,6 +7,10 @@ from st_ner_annotate import st_ner_annotate
 from st_copy_to_clipboard import st_copy_to_clipboard
 from annotated_text import annotated_text
 
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.warning("🔒 Please login from the main page to access this page.")
+    st.stop()
+
 annotated_text(
     "This ",
     ("is", "verb"),

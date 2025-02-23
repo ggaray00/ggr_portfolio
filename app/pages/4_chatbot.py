@@ -5,6 +5,10 @@ import sys
 import os
 from langchain_core.messages import ToolMessage
 
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.warning("🔒 Please login from the main page to access this page.")
+    st.stop()
+
 # Ensure project root is in sys.path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if project_root not in sys.path:

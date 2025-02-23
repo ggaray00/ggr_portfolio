@@ -5,6 +5,10 @@ import sys
 import os
 from langchain_core.messages import ToolMessage
 
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.warning("🔒 Please login from the main page to access this page.")
+    st.stop()
+
 # from app.travel_agent.graph import part_4_graph
 
 
