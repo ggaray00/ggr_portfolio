@@ -4,6 +4,8 @@ import openai
 from langchain_core.tools import tool
 import requests
 from dotenv import load_dotenv
+import streamlit as st
+
 
 load_dotenv()
 
@@ -43,12 +45,12 @@ class VectorStoreRetriever:
         ]
 
 
-# retriever = VectorStoreRetriever.from_docs(docs, openai.Client())
-#
-#
-# @tool
-# def lookup_policy(query: str) -> str:
-#     """Consult the company policies to check whether certain options are permitted.
-#     Use this before making any flight changes performing other 'write' events."""
-#     docs = retriever.query(query, k=2)
-#     return "\n\n".join([doc["page_content"] for doc in docs])
+retriever = VectorStoreRetriever.from_docs(docs, openai.Client(api_key=st.secrets["openai"]))
+
+
+@tool
+def lookup_policy(query: str) -> str:
+    """Consult the company policies to check whether certain options are permitted.
+    Use this before making any flight changes performing other 'write' events."""
+    docs = retriever.query(query, k=2)
+    return "\n\n".join([doc["page_content"] for doc in docs])

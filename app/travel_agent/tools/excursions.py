@@ -1,7 +1,9 @@
 from typing import Optional
 from langchain_core.tools import tool
-from .database import db
+# from .database import db
 import sqlite3
+from app.travel_agent.tools.database import db
+
 
 @tool
 def search_trip_recommendations(

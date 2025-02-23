@@ -4,7 +4,7 @@ PASSWORD = st.secrets["log_in_pwd"]  # Change this to your desired password
 
 from huggingface_hub import InferenceClient
 
-
+st.set_page_config(layout="wide")
 # client = InferenceClient("dslim/distilbert-NER",
 #                          token=st.secrets["all_token"])
 #

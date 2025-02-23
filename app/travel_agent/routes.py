@@ -1,12 +1,12 @@
-from app.utilities import State
+from app.travel_agent.utilities import State
 from langgraph.graph import END
-from app.base_models import CompleteOrEscalate, ToFlightBookingAssistant, ToBookCarRental, ToHotelBookingAssistant, ToBookExcursion
+from app.travel_agent.base_models import CompleteOrEscalate, ToFlightBookingAssistant, ToBookCarRental, ToHotelBookingAssistant, ToBookExcursion
 from langgraph.prebuilt import tools_condition
 
-from app.tools.flights import search_flights
-from app.tools.cars import search_car_rentals
-from app.tools.hotels import search_hotels
-from app.tools.excursions import search_trip_recommendations
+from app.travel_agent.tools.flights import search_flights
+from app.travel_agent.tools.cars import search_car_rentals
+from app.travel_agent.tools.hotels import search_hotels
+from app.travel_agent.tools.excursions import search_trip_recommendations
 
 from typing import Literal
 
